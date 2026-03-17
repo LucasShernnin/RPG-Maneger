@@ -1,6 +1,6 @@
 def facções():
 
-    lista_facções = ['Culto á Kushin', 'Rebeldes', 'Vampiros']
+    lista_facções = ['Culto de Kushin', 'Rebeldes', 'Vampiros']
 
     
 
