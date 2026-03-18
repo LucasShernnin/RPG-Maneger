@@ -1,14 +1,15 @@
-🎲 RPG Campaign Manager
+🎲 RPG Campaign Manager:
 Sistema em desenvolvimento para gerenciamento de campanhas de RPG, com foco em automação de mecânicas como personagens, eventos, facções e prestígio.
 
-🚀 Sobre o Projeto
+🚀 Sobre o Projeto:
 Este projeto foi criado com o objetivo de praticar desenvolvimento backend utilizando Python, aplicando conceitos fundamentais de programação como:
 
-funções
-estruturas condicionais
-laços de repetição
-organização de código
-modularização
+->funções
+->estruturas condicionais
+->laços de repetição
+->organização de código
+->modularização
+
 O sistema simula um gerenciador para mestres de RPG, permitindo controlar elementos importantes da campanha de forma prática.
 
 ⚙️ Funcionalidades Atuais
@@ -19,11 +20,13 @@ O sistema simula um gerenciador para mestres de RPG, permitindo controlar elemen
 ✅ Integração básica entre eventos e progressão
 🔄 Sistema de facções (em desenvolvimento)
 🔄 Sistema de prestígio (em desenvolvimento)
+
 🧠 Conceitos Aplicados
-Manipulação de dados entre funções
-Uso de parâmetros e retorno de funções
-Separação de responsabilidades no código
-Estruturação de sistemas escaláveis
+->Manipulação de dados entre funções
+->Uso de parâmetros e retorno de funções
+->Separação de responsabilidades no código
+->Estruturação de sistemas escaláveis
+
 🗂️ Estrutura do Projeto
 📁 rpg-manager
 │
@@ -32,20 +35,21 @@ Estruturação de sistemas escaláveis
 ├── faccoes.py
 └── eventos.py
 
-🎮 Como Executar
+🎮 Como Executar:
 Clone o repositório:
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+git clone https://github.com/Lucas-Nogueira/rpg_maneger.git
 Acesse a pasta do projeto:
 cd rpg-manager
 Execute o sistema:
 python menu.py
 
-🔮 Próximos Passos
-Implementação completa do sistema de prestígio
-Integração com banco de dados
-Criação de interface gráfica (dashboard estilo app)
-Sistema de múltiplos personagens
-Expansão dos eventos com múltiplas escolhas
+🔮 Próximos Passos:
+->Implementação completa do sistema de prestígio
+->Integração com banco de dados
+->Criação de interface gráfica (dashboard estilo app)
+->Sistema de múltiplos personagens
+->Expansão dos eventos com múltiplas escolhas
+
 📌 Objetivo
 Evoluir este projeto até um sistema completo de gerenciamento de campanhas, com foco em aprendizado contínuo e aplicação prática de desenvolvimento backend.
 
