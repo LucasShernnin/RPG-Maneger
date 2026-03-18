@@ -1,4 +1,4 @@
-import personagens 
+import personagens
 
 print("{}Bem Vindo ao AQTV{}".format(('-'*5), ('-'*5)))
 
@@ -14,15 +14,21 @@ def menu():
           escolha = int(input("Escolha uma opção: "))
           if escolha == 1:
                 print("===== PERSONAGEM =====")
-                jogador, nome, idade = personagens.player()
+                jogador, nome, idade, nex, nex_atual = personagens.player()
                 classe = personagens.classes()
-                lista_jogadores.append([jogador, nome, idade, classe])
+                lista_jogadores.append([jogador, nome, idade, classe, nex])
                 print('='*25)
-                print(f'Personagem Criado!\nNome: {nome}\nIdade: {idade}\nClasse: {classe} \nBem vindo ao Mundo Jogador: {jogador}!')
+                print(f'Personagem Criado!\nNome: {nome}\nIdade: {idade}\nClasse: {classe} \nNEX:{nex} \nBem vindo ao Mundo Jogador: {jogador}')
 
           if escolha == 2:
             for i, usuario in enumerate(lista_jogadores):
                       print(i+1, '-', usuario)
+
+          if escolha == 3:
+            import facções
+
+            nex_atual = facções.eventos(nex_atual)
+            print(nex_atual)
 menu()
 
 
