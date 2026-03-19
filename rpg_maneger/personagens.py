@@ -3,8 +3,8 @@ def player():
     jogador = input('Digite o nome do Jogador: ')
     nome = input('Digite o Nome do seu personagem: ')
     idade = int(input('Digite sua idade: '))
-    nex = int(input('Digite o seu NEX: '))
-    return jogador, nome, idade, nex
+    nex_atual = int(input('Digite o seu NEX: '))
+    return jogador, nome, idade, nex_atual
 
     
 def classes ():

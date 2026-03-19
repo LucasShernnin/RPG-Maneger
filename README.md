@@ -1,7 +1,7 @@
-🎲 RPG Campaign Manager:
+RPG Campaign Manager:
 Sistema em desenvolvimento para gerenciamento de campanhas de RPG, com foco em automação de mecânicas como personagens, eventos, facções e prestígio.
 
-🚀 Sobre o Projeto:
+Sobre o Projeto:
 Este projeto foi criado com o objetivo de praticar desenvolvimento backend utilizando Python, aplicando conceitos fundamentais de programação como:
 
 ->funções
@@ -12,7 +12,7 @@ Este projeto foi criado com o objetivo de praticar desenvolvimento backend utili
 
 O sistema simula um gerenciador para mestres de RPG, permitindo controlar elementos importantes da campanha de forma prática.
 
-⚙️ Funcionalidades Atuais
+Funcionalidades Atuais
 ✅ Criação de personagens
 ✅ Sistema de NEX (progressão/XP)
 ✅ Menu interativo no terminal
@@ -21,7 +21,7 @@ O sistema simula um gerenciador para mestres de RPG, permitindo controlar elemen
 🔄 Sistema de facções (em desenvolvimento)
 🔄 Sistema de prestígio (em desenvolvimento)
 
-🧠 Conceitos Aplicados
+Conceitos Aplicados
 ->Manipulação de dados entre funções
 ->Uso de parâmetros e retorno de funções
 ->Separação de responsabilidades no código
@@ -35,7 +35,7 @@ O sistema simula um gerenciador para mestres de RPG, permitindo controlar elemen
 ├── faccoes.py
 └── eventos.py
 
-🎮 Como Executar:
+Como Executar:
 Clone o repositório:
 git clone https://github.com/Lucas-Nogueira/rpg_maneger.git
 Acesse a pasta do projeto:
@@ -43,16 +43,16 @@ cd rpg-manager
 Execute o sistema:
 python menu.py
 
-🔮 Próximos Passos:
+Próximos Passos:
 ->Implementação completa do sistema de prestígio
 ->Integração com banco de dados
 ->Criação de interface gráfica (dashboard estilo app)
 ->Sistema de múltiplos personagens
 ->Expansão dos eventos com múltiplas escolhas
 
-📌 Objetivo
+Objetivo
 Evoluir este projeto até um sistema completo de gerenciamento de campanhas, com foco em aprendizado contínuo e aplicação prática de desenvolvimento backend.
 
-👨‍💻 Autor
+Autor
 Desenvolvido por mim mesmo
 Em transição de carreira para a área de desenvolvimento backend.
