@@ -4,7 +4,19 @@ def player():
     nome = input('Digite o Nome do seu personagem: ')
     idade = int(input('Digite sua idade: '))
     nex_atual = int(input('Digite o seu NEX: '))
-    return jogador, nome, idade, nex_atual
+
+    classe = classes()
+
+    personagem = {
+         'player': jogador,
+         'nome': nome,
+         'idade': idade,
+         'nex': nex_atual,
+         'classe': classe
+    }
+    print(f'Personagem Criado!\nNome: {nome}\nIdade: {idade}\nClasse: {classe} \nNEX:{nex_atual} \nBem vindo ao Mundo Jogador: {jogador}')
+
+    return personagem
 
     
 def classes ():
