@@ -1,12 +1,5 @@
-import personagens
+def eventos(lista_jogadores):
 
-#def lista_fac():
-
-#    culto_kushin = -10
-#    rebeldes = 0
-#lista_fac()
-
-def eventos(personagem):
     lista_eventos = ['Culto de Kushin', 'Rebeldes'] 
 
     for i, missões in enumerate(lista_eventos):
@@ -19,11 +12,18 @@ def eventos(personagem):
         r = int(input('A missão foi concluida? Digite 1 para Sim e 2 para Não: '))
         
         if r == 1:
-            personagem["nex"] += 2
+            for personagem in lista_jogadores:
+                personagem["nex"] += 2
+                if r == 1:
+                    personagem['prestigio_culto'] += +5
+                    personagem['prestigio_rebeldes'] += -5
+
             print('Recompensa: +2 NEX')
+            print('Prestigio com o Culto: +5')
+            print('Prestigio com os Rebeldes: -5')
+        
             
         else:
-            personagem['nex'] += 0
             print('Missão falhou!')
 
     if escolha == 2:
@@ -33,17 +33,20 @@ def eventos(personagem):
         r = int(input('A missão foi concluida? Digite 1 para Sim e 2 para Não: '))
         
         if r == 1:
-            personagem['nex'] += 2
+            for personagem in lista_jogadores:
+                personagem['nex'] += 2
+                if r == 1:
+                    personagem['prestigio_culto'] += -5
+                    personagem['prestigio_rebeldes'] += +5
+            
             print('Recompensa: +2 NEX')
+            print('Prestigio com o Culto: -5')
+            print('Prestigio com os Rebeldes: +5')
             
         else:
-            personagem['nex'] += 0
             print('Missão falhou!')
 
-    return personagem
-
-            
-
+    return lista_jogadores
 
 
 

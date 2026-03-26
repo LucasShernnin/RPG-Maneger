@@ -7,7 +7,9 @@ nex_atual = None
 
 def menu():
     while True:
+          print('='*5)
           print("MENU")
+          print('='*5)
           lista_menu  = ['Criar Personagem', 'Ver Jogadores', 'Registrar Evento', 'Dashboard', 'Sair']
 
           #---Menu---
@@ -17,7 +19,7 @@ def menu():
 
           #---Escolha 1---
           if escolha == 1:
-                print("===== PERSONAGEM =====")
+                print("===== CRIAÇÃO DE PERSONAGEM =====")
                 personagem = personagens.player()
                 lista_jogadores.append(personagem)
                 print('='*25)
@@ -26,11 +28,13 @@ def menu():
           if escolha == 2:
                  for i, usuario in enumerate(lista_jogadores):
                         print(f"{i+1} - Personagem:")
-                        print('--'*5)
                         print(f"Player: {usuario['player']}")
                         print(f"Nome do Personagem: {usuario['nome']}")
                         print(f"Classe: {usuario['classe']}")
                         print(f"NEX: {usuario['nex']}")
+                        print(' ')
+                        print(f"Prestigio com o Culto: {usuario['prestigio_culto']}")
+                        print(f"Prestigio com os Rebeldes: {usuario['prestigio_rebeldes']}")
                         print('----//----')
           #---Escolha 3---
 
@@ -40,7 +44,7 @@ def menu():
             if personagem['nex'] is None:
                  print("Crie um personagem primeiro!")
             elif personagem['nex'] != None:
-                 personagem = facções.eventos(personagem)
+                 facções.eventos(lista_jogadores)
 
 menu()
 

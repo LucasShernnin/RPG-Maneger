@@ -4,6 +4,8 @@ def player():
     nome = input('Digite o Nome do seu personagem: ')
     idade = int(input('Digite sua idade: '))
     nex_atual = int(input('Digite o seu NEX: '))
+    culto_kushin = -10
+    rebeldes = 0
 
     classe = classes()
 
@@ -12,8 +14,12 @@ def player():
          'nome': nome,
          'idade': idade,
          'nex': nex_atual,
-         'classe': classe
+         'classe': classe,
+         'prestigio_culto': culto_kushin,
+         'prestigio_rebeldes': rebeldes
+
     }
+    print('='*25)
     print(f'Personagem Criado!\nNome: {nome}\nIdade: {idade}\nClasse: {classe} \nNEX:{nex_atual} \nBem vindo ao Mundo Jogador: {jogador}')
 
     return personagem
