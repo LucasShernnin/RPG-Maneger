@@ -6,6 +6,7 @@ def eventos(lista_jogadores):
         print(i+1, '-', missões)
     escolha = int(input('Escolha uma Facção: '))
 
+    #---Missão Culto---#
     if escolha == 1:
         print('Missão: Ajudar Ocultista')
         print('Descrição da missão...')
@@ -14,9 +15,9 @@ def eventos(lista_jogadores):
         if r == 1:
             for personagem in lista_jogadores:
                 personagem["nex"] += 2
-                if r == 1:
-                    personagem['prestigio_culto'] += +5
-                    personagem['prestigio_rebeldes'] += -5
+
+                personagem['prestigio_culto'] += +5
+                personagem['prestigio_rebeldes'] += -5
 
             print('Recompensa: +2 NEX')
             print('Prestigio com o Culto: +5')
@@ -26,6 +27,7 @@ def eventos(lista_jogadores):
         else:
             print('Missão falhou!')
 
+    #---Missão Rebeldes---#
     if escolha == 2:
         print('Missão: Rebelde em apuros')
         print('Descrição da missão...')
@@ -35,9 +37,9 @@ def eventos(lista_jogadores):
         if r == 1:
             for personagem in lista_jogadores:
                 personagem['nex'] += 2
-                if r == 1:
-                    personagem['prestigio_culto'] += -5
-                    personagem['prestigio_rebeldes'] += +5
+
+                personagem['prestigio_culto'] += -5
+                personagem['prestigio_rebeldes'] += +5
             
             print('Recompensa: +2 NEX')
             print('Prestigio com o Culto: -5')

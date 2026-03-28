@@ -1,4 +1,5 @@
 
+#---Player---#
 def player():
     jogador = input('Digite o nome do Jogador: ')
     nome = input('Digite o Nome do seu personagem: ')
@@ -24,7 +25,7 @@ def player():
 
     return personagem
 
-    
+#---Classes---#
 def classes ():
         lista_classes= [ 'Combatente', 'Especialista', 'Ocultista']
         

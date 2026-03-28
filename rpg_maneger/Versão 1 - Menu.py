@@ -3,7 +3,6 @@ import personagens
 print("{}Bem Vindo ao AQTV{}".format(('-'*5), ('-'*5)))
 
 lista_jogadores = []
-nex_atual = None
 
 def menu():
     while True:
@@ -12,19 +11,19 @@ def menu():
           print('='*5)
           lista_menu  = ['Criar Personagem', 'Ver Jogadores', 'Registrar Evento', 'Dashboard', 'Sair']
 
-          #---Menu---
+          #---Menu---#
           for i, itens in enumerate(lista_menu):
                 print(i+1, '-', itens)
           escolha = int(input("Escolha uma opção: "))
 
-          #---Escolha 1---
+          #---Criação de Personagem---#
           if escolha == 1:
                 print("===== CRIAÇÃO DE PERSONAGEM =====")
                 personagem = personagens.player()
                 lista_jogadores.append(personagem)
                 print('='*25)
 
-          #---Escolha 2---
+          #---Ver Personagem---#
           if escolha == 2:
                  for i, usuario in enumerate(lista_jogadores):
                         print(f"{i+1} - Personagem:")
@@ -36,8 +35,7 @@ def menu():
                         print(f"Prestigio com o Culto: {usuario['prestigio_culto']}")
                         print(f"Prestigio com os Rebeldes: {usuario['prestigio_rebeldes']}")
                         print('----//----')
-          #---Escolha 3---
-
+          #---Escolha 3---#
           if escolha == 3:
             import facções
             
