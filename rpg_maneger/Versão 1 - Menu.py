@@ -1,3 +1,25 @@
+import sqlite3
+
+conexão = sqlite3.connect("Banco de dados.db")
+cursor = conexão.cursor()
+
+cursor.execute("""CREATE TABLE IF NOT EXISTS criação_de_personagens(
+            id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+            jogador TEXT NOT NULL,
+            personagem TEXT NOT NULL UNIQUE,
+            nex INTEGER NOT NULL,
+            classe INTEGER NOT NULL,
+            p_culto INTEGER NOT NULL,
+            p_rebeldes INTEGER NOT NULL
+            
+)""")
+
+cursor.execute(""" INSERT INTO criação_de_personagens 
+               (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
+               ('player','nome', 'classe', 'nex', 'prestigio_culto', 'prestigio_rebeldes'  )
+
+""")
+
 import personagens
 
 print("{}Bem Vindo ao AQTV{}".format(('-'*5), ('-'*5)))
