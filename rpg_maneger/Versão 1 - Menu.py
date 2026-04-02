@@ -84,7 +84,6 @@ def menu():
                   ))
 
 conexão.commit()
-
 menu()
 
 
