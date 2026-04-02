@@ -37,7 +37,8 @@ def menu():
                 personagem = personagens.player()
                 lista_jogadores.append(personagem)
                 print('='*25)
-
+            
+            #--Banco de Dados (Criação de personagem)---#
                 cursor.execute(""" INSERT INTO criacão_de_personagens
                               (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
                               (?, ?, ?, ?, ?, ?)""",
@@ -47,7 +48,7 @@ def menu():
                               personagem['classe'],
                               personagem['nex'],
                               personagem['prestigio_culto'],
-                              personagem['prestigio_rebeldes']
+                              personagem['prestigio_rebeldes'],
                               ))
 
           #---Ver Personagem---#
@@ -71,7 +72,7 @@ def menu():
             elif personagem['nex'] != None:
                  facções.eventos(lista_jogadores)
 
-#--Banco de Dados---#
+            #--Banco de Dados (Atualização de informações)---#
 
             cursor.execute(""" INSERT INTO criacão_de_personagens 
                   (nex, p_culto, p_rebeldes) VALUES
@@ -79,7 +80,7 @@ def menu():
                   (
                   personagem['nex'],
                   personagem['prestigio_culto'],
-                  personagem['prestigio_rebeldes']
+                  personagem['prestigio_rebeldes'],
 
                   ))
 
