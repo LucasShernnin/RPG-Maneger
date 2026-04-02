@@ -4,7 +4,7 @@ import personagens
 conexão = sqlite3.connect("Banco de dados.db")
 cursor = conexão.cursor()
 
-cursor.execute("""CREATE TABLE IF NOT EXISTS criação_de_personagens(
+cursor.execute("""CREATE TABLE IF NOT EXISTS criacão_de_personagens(
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
             jogador TEXT NOT NULL,
             personagem TEXT NOT NULL,
@@ -37,7 +37,6 @@ def menu():
                 personagem = personagens.player()
                 lista_jogadores.append(personagem)
                 print('='*25)
-                print(personagem)
 
                 cursor.execute(""" INSERT INTO criacão_de_personagens
                               (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
@@ -74,7 +73,7 @@ def menu():
 
 #--Banco de Dados---#
 
-            cursor.execute(""" INSERT INTO criação_de_personagens 
+            cursor.execute(""" INSERT INTO criacão_de_personagens 
                   (nex, p_culto, p_rebeldes) VALUES
                   (?, ?, ?)""",
                   (
