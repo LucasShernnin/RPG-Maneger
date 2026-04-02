@@ -1,4 +1,5 @@
 import sqlite3
+import personagens
 
 conexão = sqlite3.connect("Banco de dados.db")
 cursor = conexão.cursor()
@@ -6,21 +7,13 @@ cursor = conexão.cursor()
 cursor.execute("""CREATE TABLE IF NOT EXISTS criação_de_personagens(
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
             jogador TEXT NOT NULL,
-            personagem TEXT NOT NULL UNIQUE,
+            personagem TEXT NOT NULL,
             nex INTEGER NOT NULL,
             classe INTEGER NOT NULL,
             p_culto INTEGER NOT NULL,
             p_rebeldes INTEGER NOT NULL
             
 )""")
-
-cursor.execute(""" INSERT INTO criação_de_personagens 
-               (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
-               ('player','nome', 'classe', 'nex', 'prestigio_culto', 'prestigio_rebeldes'  )
-
-""")
-
-import personagens
 
 print("{}Bem Vindo ao AQTV{}".format(('-'*5), ('-'*5)))
 
@@ -65,6 +58,24 @@ def menu():
                  print("Crie um personagem primeiro!")
             elif personagem['nex'] != None:
                  facções.eventos(lista_jogadores)
+
+#--Banco de Dados---#
+
+for personagem in lista_jogadores:
+      cursor.execute(""" INSERT INTO criação_de_personagens 
+               (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
+               (?, ?, ?, ?, ?, ?)""",
+               
+               personagem['player'],
+               personagem['nome'],
+               personagem['classe'],
+               personagem['nex'],
+               personagem['prestigio_culto'],
+               personagem['prestigio_rebeldes']
+
+               )
+
+conexão.commit()
 
 menu()
 
