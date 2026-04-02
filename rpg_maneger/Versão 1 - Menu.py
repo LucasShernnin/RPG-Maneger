@@ -37,6 +37,19 @@ def menu():
                 personagem = personagens.player()
                 lista_jogadores.append(personagem)
                 print('='*25)
+                print(personagem)
+
+                cursor.execute(""" INSERT INTO criacão_de_personagens
+                              (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
+                              (?, ?, ?, ?, ?, ?)""",
+                              (
+                              personagem['player'],
+                              personagem['nome'],
+                              personagem['classe'],
+                              personagem['nex'],
+                              personagem['prestigio_culto'],
+                              personagem['prestigio_rebeldes']
+                              ))
 
           #---Ver Personagem---#
           if escolha == 2:
@@ -61,19 +74,15 @@ def menu():
 
 #--Banco de Dados---#
 
-for personagem in lista_jogadores:
-      cursor.execute(""" INSERT INTO criação_de_personagens 
-               (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
-               (?, ?, ?, ?, ?, ?)""",
-               
-               personagem['player'],
-               personagem['nome'],
-               personagem['classe'],
-               personagem['nex'],
-               personagem['prestigio_culto'],
-               personagem['prestigio_rebeldes']
+            cursor.execute(""" INSERT INTO criação_de_personagens 
+                  (nex, p_culto, p_rebeldes) VALUES
+                  (?, ?, ?)""",
+                  (
+                  personagem['nex'],
+                  personagem['prestigio_culto'],
+                  personagem['prestigio_rebeldes']
 
-               )
+                  ))
 
 conexão.commit()
 
