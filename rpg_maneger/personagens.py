@@ -11,7 +11,7 @@ def player():
     classe = classes()
 
     personagem = {
-         'player': jogador,
+         'user': jogador,
          'nome': nome,
          'idade': idade,
          'nex': nex_atual,
