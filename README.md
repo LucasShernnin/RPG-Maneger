@@ -18,8 +18,9 @@ Funcionalidades Atuais
 ✅ Menu interativo no terminal
 ✅ Sistema inicial de eventos (sidequests)
 ✅ Integração básica entre eventos e progressão
-🔄 Sistema de facções (em desenvolvimento)
-🔄 Sistema de prestígio (em desenvolvimento)
+✅ Sistema de facções (em desenvolvimento)
+✅ Sistema de prestígio (em desenvolvimento)
+🔄 Sistema basico de armazenamento no banco de dados SQLite (em desenvolvimento)
 
 Conceitos Aplicados
 ->Manipulação de dados entre funções
