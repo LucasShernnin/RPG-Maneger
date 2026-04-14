@@ -37,18 +37,17 @@ def menu():
                 lista_jogadores.append(personagem)
                 print('='*25)
 
-      #--Banco de Dados (Criação de personagem)---#
-          #cursor.execute(""" INSERT INTO criacão_de_personagens
-                        #(jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
-                        #(?, ?, ?, ?, ?, ?)""",
-                  #(
-                        #personagem['user'],
-                        #personagem['nome'],
-                        #personagem['classe'],
-                        #personagem['nex'],
-                        #personagem['prestigio_culto'],
-                        #personagem['prestigio_rebeldes']
-                  #))
+                cursor.execute(""" INSERT INTO criacão_de_personagens
+                              (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
+                              (?, ?, ?, ?, ?, ?)""",
+                              (
+                              personagem['player'],
+                              personagem['nome'],
+                              personagem['classe'],
+                              personagem['nex'],
+                              personagem['prestigio_culto'],
+                              personagem['prestigio_rebeldes']
+                              ))
 
           #---Ver Personagem---#
           if escolha == 2:
@@ -74,21 +73,17 @@ def menu():
 
             #--Banco de Dados (Atualização de informações)---#
 
-            #cursor.execute(""" INSERT INTO criacão_de_personagens 
-                  #(nex, p_culto, p_rebeldes) VALUES
-                  #(?, ?, ?)""",
-                  #(
-                  #personagem['nex'],
-                  #personagem['prestigio_culto'],
-                  #personagem['prestigio_rebeldes'],
-            #))
-          if escolha == 4:
-                from loja import loja
-                loja(lista_jogadores)
-                
+            cursor.execute(""" INSERT INTO criacão_de_personagens 
+                  (nex, p_culto, p_rebeldes) VALUES
+                  (?, ?, ?)""",
+                  (
+                  personagem['nex'],
+                  personagem['prestigio_culto'],
+                  personagem['prestigio_rebeldes']
 
+                  ))
 
-#conexão.commit()
+conexão.commit()
 menu()
 
 
