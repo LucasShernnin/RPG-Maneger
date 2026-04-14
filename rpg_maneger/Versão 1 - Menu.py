@@ -23,7 +23,7 @@ def menu():
           print('='*5)
           print("MENU")
           print('='*5)
-          lista_menu  = ['Criar Personagem', 'Ver Jogadores', 'Registrar Evento', 'Dashboard', 'Sair']
+          lista_menu  = ['Criar Personagem', 'Ver Jogadores', 'Registrar Evento', 'Loja', 'Dashboard', 'Sair']
 
           #---Menu---#
           for i, itens in enumerate(lista_menu):
@@ -36,34 +36,19 @@ def menu():
                 personagem = personagens.player()
                 lista_jogadores.append(personagem)
                 print('='*25)
-<<<<<<< HEAD
 
-          cursor.execute(""" INSERT INTO criacão_de_personagens
-                        (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
-                        (?, ?, ?, ?, ?, ?)""",
-                  (
-                        personagem['user'],
-                        personagem['nome'],
-                        personagem['classe'],
-                        personagem['nex'],
-                        personagem['prestigio_culto'],
-                        personagem['prestigio_rebeldes']
-                  ))
-=======
-            
-            #--Banco de Dados (Criação de personagem)---#
-                cursor.execute(""" INSERT INTO criacão_de_personagens
-                              (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
-                              (?, ?, ?, ?, ?, ?)""",
-                              (
-                              personagem['player'],
-                              personagem['nome'],
-                              personagem['classe'],
-                              personagem['nex'],
-                              personagem['prestigio_culto'],
-                              personagem['prestigio_rebeldes'],
-                              ))
->>>>>>> 69f710ba0ea9cab903eb2a0366e5d694ed3cc23a
+      #--Banco de Dados (Criação de personagem)---#
+          #cursor.execute(""" INSERT INTO criacão_de_personagens
+                        #(jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
+                        #(?, ?, ?, ?, ?, ?)""",
+                  #(
+                        #personagem['user'],
+                        #personagem['nome'],
+                        #personagem['classe'],
+                        #personagem['nex'],
+                        #personagem['prestigio_culto'],
+                        #personagem['prestigio_rebeldes']
+                  #))
 
           #---Ver Personagem---#
           if escolha == 2:
@@ -73,6 +58,7 @@ def menu():
                         print(f"Nome do Personagem: {usuario['nome']}")
                         print(f"Classe: {usuario['classe']}")
                         print(f"NEX: {usuario['nex']}")
+                        print(f"Dinheiro: {usuario['dinheiro']}")
                         print(' ')
                         print(f"Prestigio com o Culto: {usuario['prestigio_culto']}")
                         print(f"Prestigio com os Rebeldes: {usuario['prestigio_rebeldes']}")
@@ -88,27 +74,21 @@ def menu():
 
             #--Banco de Dados (Atualização de informações)---#
 
-<<<<<<< HEAD
-          cursor.execute(""" INSERT INTO criacão_de_personagens 
-            (nex, p_culto, p_rebeldes) VALUES
-            (?, ?, ?)""",
-            (
-            personagem['nex'],
-            personagem['prestigio_culto'],
-            personagem['prestigio_rebeldes']
-=======
-            cursor.execute(""" INSERT INTO criacão_de_personagens 
-                  (nex, p_culto, p_rebeldes) VALUES
-                  (?, ?, ?)""",
-                  (
-                  personagem['nex'],
-                  personagem['prestigio_culto'],
-                  personagem['prestigio_rebeldes'],
->>>>>>> 69f710ba0ea9cab903eb2a0366e5d694ed3cc23a
+            #cursor.execute(""" INSERT INTO criacão_de_personagens 
+                  #(nex, p_culto, p_rebeldes) VALUES
+                  #(?, ?, ?)""",
+                  #(
+                  #personagem['nex'],
+                  #personagem['prestigio_culto'],
+                  #personagem['prestigio_rebeldes'],
+            #))
+          if escolha == 4:
+                from loja import loja
+                loja(lista_jogadores)
+                
 
-            ))
 
-conexão.commit()
+#conexão.commit()
 menu()
 
 
