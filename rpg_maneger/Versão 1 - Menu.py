@@ -1,18 +1,5 @@
-import sqlite3
+
 import personagens
-
-conexão = sqlite3.connect("Banco de dados.db")
-cursor = conexão.cursor()
-
-cursor.execute("""CREATE TABLE IF NOT EXISTS criacão_de_personagens(
-            id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-            jogador TEXT NOT NULL,
-            personagem TEXT NOT NULL,
-            nex INTEGER NOT NULL,
-            classe TEXT NOT NULL,
-            p_culto INTEGER NOT NULL,
-            p_rebeldes INTEGER NOT NULL
-            )""")
 
 print("{}Bem Vindo ao AQTV{}".format(('-'*5), ('-'*5)))
 
@@ -37,18 +24,6 @@ def menu():
                 lista_jogadores.append(personagem)
                 print('='*25)
 
-                cursor.execute(""" INSERT INTO criacão_de_personagens
-                              (jogador, personagem, classe, nex, p_culto, p_rebeldes) VALUES
-                              (?, ?, ?, ?, ?, ?)""",
-                              (
-                              personagem['player'],
-                              personagem['nome'],
-                              personagem['classe'],
-                              personagem['nex'],
-                              personagem['prestigio_culto'],
-                              personagem['prestigio_rebeldes']
-                              ))
-
           #---Ver Personagem---#
           if escolha == 2:
                  for i, usuario in enumerate(lista_jogadores):
@@ -71,19 +46,10 @@ def menu():
             elif personagem['nex'] != None:
                  facções.eventos(lista_jogadores)
 
-            #--Banco de Dados (Atualização de informações)---#
 
-            cursor.execute(""" INSERT INTO criacão_de_personagens 
-                  (nex, p_culto, p_rebeldes) VALUES
-                  (?, ?, ?)""",
-                  (
-                  personagem['nex'],
-                  personagem['prestigio_culto'],
-                  personagem['prestigio_rebeldes']
-
-                  ))
-
-conexão.commit()
+          if escolha ==4:
+                 from loja import loja
+                 loja(lista_jogadores)
 menu()
 
 

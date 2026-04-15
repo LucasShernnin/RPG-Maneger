@@ -5,8 +5,8 @@ def player():
     nome = input('Digite o Nome do seu personagem: ')
     idade = int(input('Digite sua idade: '))
     nex_atual = int(input('Digite o seu NEX: '))
-    din = 0
     din_Anterior = int(input('Digite quanto trouxe da ultima jornada: '))
+    din = 0
     din_atual = din + din_Anterior
     culto_kushin = -10
     rebeldes = 0

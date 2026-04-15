@@ -32,7 +32,7 @@ def loja(lista_jogadores):
                 }]
 
             for i, magicos in enumerate(itens_magicos):
-                 print(f"{i+1}, -")
+                 print(f"{i+1}-")
                  print(f"Nome: ", magicos['item'])
                  print(f"Elemento: ", magicos['elemento'])
                  print(f"Efeito: ", magicos['efeito'])
@@ -41,17 +41,28 @@ def loja(lista_jogadores):
 
             escolha = int(input('Escolha um item: '))
 
-            if escolha == 1:
-                import personagens
+            if escolha != None:
 
-                #print('Tem certeza que deseja este item?: ', magicos['item'])
-                
                 print('Valor a ser descontado: ', magicos['preco'])
-                
+
+                per_escolha = input('Qual personagem vai comprar: ').strip().lower()
+                per_encontrado = None
+
+                item_escolhido = itens_magicos[escolha-1]
+
                 for personagem in lista_jogadores:
-                     desconto = personagem['dinheiro'] - magicos['preco']
-                     print(desconto)
+                    if personagem['nome']== per_escolha:
+                        per_encontrado = personagem
+                        break
+
+                if per_encontrado:
+                        per_encontrado['dinheiro'] -= item_escolhido['preco']
+                        print("Compra realizada!")
+                else:
+                        print("Personagem não encontrado!")
+                          
 
 
 
-            return itens_magicos[escolha-1], desconto
+
+            return itens_magicos[escolha-1], lista_jogadores, per_escolha, per_encontrado
