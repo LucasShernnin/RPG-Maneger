@@ -14,6 +14,7 @@ def player():
     classe = classes()
 
     personagem = {
+         
          'user': jogador,
          'nome': nome,
          'idade': idade,
@@ -21,7 +22,8 @@ def player():
          'nex': nex_atual,
          'classe': classe,
          'prestigio_culto': culto_kushin,
-         'prestigio_rebeldes': rebeldes
+         'prestigio_rebeldes': rebeldes,
+         'inventario': []
 
     }
     print('='*25)

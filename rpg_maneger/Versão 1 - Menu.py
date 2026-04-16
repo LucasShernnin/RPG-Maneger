@@ -37,6 +37,9 @@ def menu():
                         print(f"Prestigio com o Culto: {usuario['prestigio_culto']}")
                         print(f"Prestigio com os Rebeldes: {usuario['prestigio_rebeldes']}")
                         print('----//----')
+
+                        for itens in personagem['inventario']:
+                              print(personagem)
           #---Escolha 3---#
           if escolha == 3:
             import facções

@@ -45,12 +45,13 @@ def loja(lista_jogadores):
 
                 print('Valor a ser descontado: ', magicos['preco'])
 
-                per_escolha = input('Qual personagem vai comprar: ').strip().lower()
+                per_escolha = input('Qual personagem vai comprar: ')
                 per_encontrado = None
 
                 item_escolhido = itens_magicos[escolha-1]
 
                 for personagem in lista_jogadores:
+
                     if personagem['nome']== per_escolha:
                         per_encontrado = personagem
                         break
@@ -58,11 +59,10 @@ def loja(lista_jogadores):
                 if per_encontrado:
                         per_encontrado['dinheiro'] -= item_escolhido['preco']
                         print("Compra realizada!")
+                        per_encontrado['inventario'] += item_escolhido
+
                 else:
                         print("Personagem não encontrado!")
-                          
-
-
 
 
             return itens_magicos[escolha-1], lista_jogadores, per_escolha, per_encontrado
