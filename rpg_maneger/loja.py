@@ -65,4 +65,4 @@ def loja(lista_jogadores):
                         print("Personagem não encontrado!")
 
 
-            return itens_magicos[escolha-1], lista_jogadores, per_escolha, per_encontrado
+            return itens_magicos[escolha-1], lista_jogadores, per_escolha, per_encontrado, item_escolhido

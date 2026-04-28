@@ -39,7 +39,11 @@ def menu():
                         print('----//----')
 
                         for itens in personagem['inventario']:
-                              print(personagem)
+                              print("Seus itens:")
+                              print("Item: ", itens['item'])
+                              print("Elemento: ", itens['elemento'])
+                              print("Efeito: ", itens['efeito'])
+                              break
           #---Escolha 3---#
           if escolha == 3:
             import facções
