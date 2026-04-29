@@ -38,12 +38,13 @@ def menu():
                         print(f"Prestigio com os Rebeldes: {usuario['prestigio_rebeldes']}")
                         print('----//----')
 
-                        for itens in personagem['inventario']:
-                              print("Seus itens:")
-                              print("Item: ", itens['item'])
-                              print("Elemento: ", itens['elemento'])
-                              print("Efeito: ", itens['efeito'])
-                              break
+                        print("Seus itens:")
+                        for itens in usuario['inventario']:
+                              print(f"Item: {itens['item']}")
+                              print(f"Elemento: {itens['elemento']}")
+                              print(f"Efeito: {itens['efeito']}")
+                              print('<-->')
+
           #---Escolha 3---#
           if escolha == 3:
             import facções

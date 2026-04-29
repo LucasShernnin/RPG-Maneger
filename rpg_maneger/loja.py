@@ -59,7 +59,7 @@ def loja(lista_jogadores):
                 if per_encontrado:
                         per_encontrado['dinheiro'] -= item_escolhido['preco']
                         print("Compra realizada!")
-                        per_encontrado['inventario'] += item_escolhido
+                        per_encontrado['inventario'].append(item_escolhido)
 
                 else:
                         print("Personagem não encontrado!")
