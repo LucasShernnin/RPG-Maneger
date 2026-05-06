@@ -1,6 +1,10 @@
+
+from personagens import player
+from personagens import ver_personagem, lista_jogadores
+from facções import eventos
+from loja import loja
+
 print("{}Bem Vindo ao AQTV{}".format(('-'*5), ('-'*5)))
-
-
 def menu():
     while True:
           print('='*5)
@@ -16,24 +20,24 @@ def menu():
           #---Criação de Personagem---#
           if escolha == 1:
                 print("===== CRIAÇÃO DE PERSONAGEM =====")
-                from personagens import player
                 player()
                 print('='*25)
 
           #---Ver Personagem---#
-          if escolha == 2:
-               from personagens import ver_personagem, lista_jogadores
+          elif escolha == 2:
                ver_personagem(lista_jogadores)
 
           #---Escolha 3---#
-          if escolha == 3:
-            from facções import eventos
+          elif escolha == 3:
             eventos(lista_jogadores)
 
 
-          if escolha ==4:
-                 from loja import loja
+          elif escolha == 4:
                  loja(lista_jogadores)
+
+          elif escolha == 6:
+               print('Sistema Fechado!')
+               break
 menu()
 
 

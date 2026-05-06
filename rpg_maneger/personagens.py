@@ -69,6 +69,4 @@ def ver_personagem(lista_jogadores):
                               print(f"Item: {itens['item']}")
                               print(f"Elemento: {itens['elemento']}")
                               print(f"Efeito: {itens['efeito']}")
-                              print('<-->')
-
                               return usuario
