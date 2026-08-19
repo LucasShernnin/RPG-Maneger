@@ -1,7 +1,7 @@
 
 from personagens import player
 from personagens import ver_personagem, lista_jogadores
-from facções import eventos
+from Guildas import eventos
 from loja import loja
 
 print("{}Bem Vindo ao AQTV{}".format(('-'*5), ('-'*5)))
